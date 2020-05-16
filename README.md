@@ -14,3 +14,5 @@
 ```symfony console doctrine:migrations:migrate```
 
 ```symfony server:start -d```
+
+Перейти по адрессу localhost:8000/admin
