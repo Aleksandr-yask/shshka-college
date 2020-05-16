@@ -1,0 +1,131 @@
+easy_admin:
+    site_name: Прокатим
+
+    design:
+        menu:
+            - { label: 'Машины', entity: 'Cars' }
+            - { label: 'Клиенты', entity: 'Clients' }
+            - { label: 'Категории', entity: 'Categories' }
+            - { label: 'Заказы', entity: 'Orders' }
+        assets:
+            js:
+                - 'js-custom.js'
+    entities:
+        Cars:
+            class: App\Entity\Cars
+            label: 'Машины'
+
+            list:
+                actions:
+                    - { name: 'search', label: 'Поиск'}
+                    - { name: 'new', label: 'Добавить'}
+                fields:
+                    - { property: 'name', label: 'Наименование' }
+                    - { property: 'auto_number', label: 'Номер автомобиля' }
+                    - { property: 'price', label: 'Цена' }
+                    - { property: 'chattel', label: 'Залог' }
+                    - { property: 'categories', label: 'Категории' }
+            show:
+                fields:
+                    - { property: 'name', label: 'Наименование' }
+                    - { property: 'auto_number', label: 'Номер автомобиля' }
+                    - { property: 'price', label: 'Цена' }
+                    - { property: 'chattel', label: 'Залог' }
+                    - { property: 'categories', label: 'Категории' }
+            edit:
+                fields:
+                    - { property: 'name', label: 'Наименование' }
+                    - { property: 'auto_number', label: 'Номер автомобиля' }
+                    - { property: 'price', label: 'Цена' }
+                    - { property: 'chattel', label: 'Залог' }
+                    - { property: 'categories', label: 'Категории' }
+            new:
+                fields:
+                    - { property: 'name', label: 'Наименование' }
+                    - { property: 'auto_number', label: 'Номер автомобиля' }
+                    - { property: 'price', label: 'Цена' }
+                    - { property: 'chattel', label: 'Залог' }
+                    - { property: 'categories', label: 'Категории' }
+        Orders:
+            class: App\Entity\Orders
+            label: 'Заказы'
+            list:
+                actions:
+                    - { name: 'search', label: 'Поиск'}
+                    - { name: 'new', label: 'Добавить'}
+                fields:
+                    - { property: 'order_datetime', label: 'Дата создания заказа' }
+                    - { property: 'cars', label: 'Машина' }
+                    - { property: 'clients', label: 'Клиент' }
+            show:
+                fields:
+                    - { property: 'order_datetime', label: 'Дата создания заказа' }
+                    - { property: 'cars', label: 'Машина' }
+                    - { property: 'clients', label: 'Клиент' }
+            edit:
+                fields:
+                    - { property: 'order_datetime', label: 'Дата создания заказа' }
+                    - { property: 'cars', label: 'Машина' }
+                    - { property: 'clients', label: 'Клиент' }
+            new:
+                fields:
+                    - { property: 'order_datetime', label: 'Дата создания заказа' }
+                    - { property: 'cars', label: 'Машина' }
+                    - { property: 'clients', label: 'Клиент' }
+
+        Clients:
+            class: App\Entity\Clients
+            label: 'Клиенты'
+            list:
+                actions:
+                    - { name: 'search', label: 'Поиск'}
+                    - { name: 'new', label: 'Добавить'}
+                fields:
+                    - { property: 'fio', label: 'ФИО' }
+                    - { property: 'adress', label: 'Адрес' }
+                    - { property: 'phone', label: 'Номер телефона' }
+                    - { property: 'status', label: 'Социальное положение' }
+            show:
+                fields:
+                    - { property: 'fio', label: 'ФИО' }
+                    - { property: 'adress', label: 'Адрес' }
+                    - { property: 'phone', label: 'Номер телефона' }
+                    - { property: 'status', label: 'Социальное положение' }
+            edit:
+                fields:
+                    - { property: 'fio', label: 'ФИО' }
+                    - { property: 'adress', label: 'Адрес' }
+                    - { property: 'phone', label: 'Номер телефона' }
+                    - { property: 'status', label: 'Социальное положение' }
+
+            new:
+                fields:
+                    - { property: 'fio', label: 'ФИО' }
+                    - { property: 'adress', label: 'Адрес' }
+                    - { property: 'phone', label: 'Номер телефона' }
+                    - { property: 'status', label: 'Социальное положение' }
+        Categories:
+            class: App\Entity\Categories
+            label: 'Категории'
+
+            list:
+                actions:
+                    - { name: 'search', label: 'Поиск'}
+                    - { name: 'new', label: 'Добавить'}
+                fields:
+                    - { property: 'name', label: 'Название' }
+                    - { property: 'isActive', label: 'Активен' }
+            edit:
+                fields:
+                    - { property: 'name', label: 'Название' }
+                    - { property: 'isActive', label: 'Активен' }
+
+            show:
+                fields:
+                    - { property: 'name', label: 'Название' }
+                    - { property: 'isActive', label: 'Активен' }
+            new:
+                fields:
+                    - { property: 'name', label: 'Название' }
+                    - { property: 'isActive', label: 'Активен' }
+
